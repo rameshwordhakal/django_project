@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for blog in blogs %}
+	{%if blog.publish%}
+		<a href="{% url 'details' pk=blog.pk %}"><h3>{{blog.title }}</h3></a><hr>
+	{% endif %}
+{% endfor %}
+{% endblock content %}

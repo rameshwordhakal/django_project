@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+		{% block content %}
+		{% if blog.publish %}
+			<br/><br/><h2>
+				{{blog.title}}
+			</h2>
+
+			<p>{{blog.content}}</p>
+			<br>
+			<h4>{{blog.author}}</h4>
+			<h5>{{blog.updated}}</h5><hr>
+		{% else %}
+				<h1>Blog not published.</h1>
+
+		{% endif %}
+		{% endblock content %}
